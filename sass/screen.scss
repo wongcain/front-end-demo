@@ -1,0 +1,63 @@
+@import "compass";
+@import "blueprint/reset";
+@import "blueprint/colors";
+@import "blueprint";
+@import "partials/base";
+@import "sassy-buttons";
+ 
+$blueprint_grid_columns: 8;
+$blueprint_grid_width: 40px;
+
+body {
+  @include blueprint-typography(true);
+  @include blueprint-debug;
+  @include container;
+  #nav {
+    @include column(3);
+  }
+  #content {
+    @include column(5, true);
+  }
+  overflow-y:scroll;
+}
+
+#header{
+  margin:10px 0 0 30px;
+}
+
+article {
+  float: left;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid $blueprint-border-color;
+  width:500px;
+  @include border-radius(20px);
+}
+
+article img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#nav li{
+  margin: 10px;
+  list-style-type: none;
+} 
+
+#nav a{
+  @include sassy-button("flat", 8px, 12px, $link-color , $link-color );
+  padding-left:10px;
+  padding-right:10px;
+  text-decoration: none;
+} 
+
+#nav a.active{
+  background-color:$link-active-color;
+}
+
+#loading{
+  margin:50px;
+}
