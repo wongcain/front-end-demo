@@ -1,4 +1,3 @@
-var GPLUS_BASE_URL = 'https://www.googleapis.com/plus/v1';
 var GPLUS_API_KEY = 'AIzaSyBSvX-IdMvSnPtBdENuZXUEMljmG-tbtkU';
 
 function getActivitiesForUser(userId, callback){
